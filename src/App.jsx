@@ -13,7 +13,17 @@ const IMAGES = { heroMockup: null };
 const FadeIn = ({ children, delay = 0, style = {} }) => {
   const ref = useRef(null);
   const [v, setV] = useState(false);
-  useEffect(() => { const o = new IntersectionObserver(([e]) => { if (e.isIntersecting) setV(true); }, { threshold: 0.1 }); if (ref.current) o.observe(ref.current); return () => o.disconnect(); }, []);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry?.isIntersecting) setV(true); },
+      { threshold: 0, rootMargin: "10px" }
+    );
+    observer.observe(el);
+    const fallback = setTimeout(() => setV(true), 800);
+    return () => { observer.disconnect(); clearTimeout(fallback); };
+  }, []);
   return <div ref={ref} style={{ ...style, opacity: v ? 1 : 0, transform: v ? "translateY(0)" : "translateY(28px)", transition: `opacity 0.7s ease ${delay}s, transform 0.7s ease ${delay}s` }}>{children}</div>;
 };
 
