@@ -60,7 +60,7 @@ const MockScreen = () => (
       <div style={{ fontFamily: "Outfit", fontSize: "2rem", fontWeight: 800 }}>¥892,350</div>
       <div style={{ display: "flex", gap: 10, marginTop: 10, flexWrap: "wrap" }}>
         <div style={{ background: "rgba(255,255,255,0.22)", borderRadius: 8, padding: "4px 10px", fontSize: "0.6rem", fontWeight: 600 }}>還元率 90%</div>
-        <div style={{ background: "rgba(255,255,255,0.22)", borderRadius: 8, padding: "4px 10px", fontSize: "0.6rem", fontWeight: 600 }}>翌日振込</div>
+        <div style={{ background: "rgba(255,255,255,0.22)", borderRadius: 8, padding: "4px 10px", fontSize: "0.6rem", fontWeight: 600 }}>最短翌日振込</div>
       </div>
     </div>
     <div style={{ marginBottom: 16 }}>
@@ -153,7 +153,7 @@ export default function IkkutokLP() {
           <div style={{ flex: "1 1 380px", minWidth: 280 }}>
             <FadeIn><div style={{ fontFamily: "Outfit,sans-serif", fontSize: "clamp(2.5rem,7vw,4.5rem)", fontWeight: 900, letterSpacing: "-0.03em", background: c.gA, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", marginBottom: 8 }}>ikkutok</div></FadeIn>
             <FadeIn delay={0.1}><p style={{ fontSize: "0.8rem", color: c.tS, fontWeight: 300, letterSpacing: "0.12em", marginBottom: 36 }}>CREATOR PLATFORM — COMING JUNE 2026</p></FadeIn>
-            <FadeIn delay={0.2}><h1 style={{ fontSize: "clamp(1.3rem,3.5vw,2rem)", fontWeight: 700, lineHeight: 1.65, marginBottom: 20 }}>売上の<span style={{ background: c.gA, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>90%</span>があなたのもの。<br />しかも<span style={{ background: c.gA, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>翌日</span>振込。</h1></FadeIn>
+            <FadeIn delay={0.2}><h1 style={{ fontSize: "clamp(1.3rem,3.5vw,2rem)", fontWeight: 700, lineHeight: 1.65, marginBottom: 20 }}>売上の<span style={{ background: c.gA, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>90%</span>があなたのもの。<br />しかも<span style={{ background: c.gA, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>最短翌日</span>振込。</h1></FadeIn>
             <FadeIn delay={0.3}><p style={{ fontSize: "0.92rem", color: c.tS, lineHeight: 1.85, marginBottom: 40, maxWidth: 440 }}>クリエイターの収益を最大化する次世代ファンクラブプラットフォーム。事前登録受付中。</p></FadeIn>
             <FadeIn delay={0.4}><CTA>事前登録する（無料）</CTA></FadeIn>
           </div>
@@ -198,7 +198,7 @@ export default function IkkutokLP() {
 
             {/* Small cards */}
             {[
-              { n: "02", i: "⚡", bg: c.gdS, t: "翌日出金", d: "売上が翌日にはあなたの口座に。月末まで待つ必要はもうありません。" },
+              { n: "02", i: "⚡", bg: c.gdS, t: "最短翌日出金", d: "売上が最短翌日にはあなたの口座に。月末まで待つ必要はもうありません。" },
               { n: "03", i: "🤝", bg: c.acS, t: "専任サポート", d: "LINEでの個別サポート。始め方から売上アップまで全面バックアップ。" },
               { n: "04", i: "🔓", bg: c.gdS, t: "縛りなし・併用OK", d: "独占契約は不要。他プラットフォームとの併用も自由。" },
               { n: "05", i: "📦", bg: c.acS, t: "かんたんコンテンツ移行", d: "myfans・Fantia等の投稿をボタンひとつで丸ごと移行。再アップロード不要。" },
@@ -297,7 +297,7 @@ export default function IkkutokLP() {
               { n: "1", t: "事前登録（今すぐ・無料）", d: "フォームからメールアドレスとSNSアカウントを登録。30秒で完了。" },
               { n: "2", t: "優先案内の受信", d: "ローンチ日確定時に優先案内。一般公開前にアカウント開設可能。" },
               { n: "3", t: "コンテンツ移行 or 新規投稿", d: "既存コンテンツはワンクリック移行。新規投稿もすぐに始められます。" },
-              { n: "4", t: "収益化スタート", d: "ファンクラブ公開 → コンテンツ投稿 → 翌日には売上振込。" },
+              { n: "4", t: "収益化スタート", d: "ファンクラブ公開 → コンテンツ投稿 → 最短翌日には売上振込。" },
             ].map((s, i) => (
               <FadeIn key={s.n} delay={i * 0.1} style={{ display: "flex", gap: 24, alignItems: "flex-start", padding: "22px 0", position: "relative" }}>
                 <div style={{ width: 40, height: 40, borderRadius: "50%", background: c.bgC, border: `2px solid ${c.ac}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Outfit", fontWeight: 800, fontSize: "1rem", color: c.ac, flexShrink: 0, position: "absolute", left: -52, zIndex: 1 }}>{s.n}</div>
